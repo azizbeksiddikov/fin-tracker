@@ -124,12 +124,7 @@ export default function ProfileSettings() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Mobile Header */}
       <div className="lg:hidden bg-white dark:bg-gray-800 border-b px-4 py-4">
-        <div className="flex items-center gap-3">
-          <Button variant="ghost" size="icon" onClick={() => router.back()}>
-            <ArrowLeft className="h-5 w-5" />
-          </Button>
-          <h1 className="text-xl font-semibold">Profile & Settings</h1>
-        </div>
+        <h1 className="text-xl font-semibold">Profile & Settings</h1>
       </div>
 
       <div className="container mx-auto p-4 lg:p-8 max-w-4xl">

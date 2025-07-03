@@ -30,7 +30,7 @@ export default function Footer() {
   );
 
   return (
-    <footer className="bg-white border-t border-gray-200 px-4 py-2 shadow-lg">
+    <footer className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 px-4 py-2 shadow-lg z-50">
       <nav className="flex items-center justify-between max-w-md mx-auto">
         {navItems.map((item, index) => {
           const Icon = item.icon;
