@@ -396,14 +396,17 @@ const formatDateKey = (date: Date): string => {
   return `${d}.${m}.${y}`;
 };
 
-export const transactionsByDate: TransactionsByDate = transactionSamples.reduce(
-  (acc: TransactionsByDate, transaction: Transaction) => {
-    const formattedDate = formatDateKey(transaction.date);
-    if (!acc[formattedDate]) {
-      acc[formattedDate] = [];
-    }
-    acc[formattedDate].push(transaction);
-    return acc;
-  },
-  {}
-);
+export const transactionsByDate: TransactionsByDate = {
+  list: transactionSamples.reduce(
+    (acc: Record<string, Transaction[]>, transaction: Transaction) => {
+      const formattedDate = formatDateKey(transaction.date);
+      if (!acc[formattedDate]) {
+        acc[formattedDate] = [];
+      }
+      acc[formattedDate].push(transaction);
+      return acc;
+    },
+    {}
+  ),
+  totalCount: transactionSamples.length,
+};

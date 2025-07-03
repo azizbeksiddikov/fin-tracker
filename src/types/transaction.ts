@@ -27,5 +27,6 @@ export interface Transaction {
 }
 
 export interface TransactionsByDate {
-  [key: string]: Transaction[];
+  list: { [key: string]: Transaction[] };
+  totalCount: number;
 }
