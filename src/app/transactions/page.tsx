@@ -173,11 +173,7 @@ export default function Transactions() {
                             </div>
 
                             <div className="flex items-center space-x-4">
-                              {category && (
-                                <Badge variant={category.color as any}>
-                                  {category.name}
-                                </Badge>
-                              )}
+                              {category && <Badge>{category.name}</Badge>}
                               <div className="text-right">
                                 <div className="font-semibold">
                                   {transaction.amount}
