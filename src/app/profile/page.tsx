@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import type React from "react";
-import { useRouter } from "next/navigation";
 
 // shadcn/ui imports
 import {
@@ -16,7 +15,6 @@ import {
   Sun,
   Globe,
   Camera,
-  ArrowLeft,
 } from "lucide-react";
 import { Button } from "@/libs/components/ui/button";
 import {
@@ -61,7 +59,6 @@ import { Member } from "@/types/member";
 import { memberSample } from "@/data/member";
 
 export default function ProfileSettings() {
-  const router = useRouter();
   const [isEditing, setIsEditing] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [showPasswordDialog, setShowPasswordDialog] = useState(false);

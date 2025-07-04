@@ -8,7 +8,7 @@ import {
   Edit,
   Trash2,
   FileText,
-  Image,
+  File,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
@@ -97,7 +97,7 @@ export default function Transactions() {
                 Import CSV/Excel
               </Button>
               <Button variant="outline" className="h-20 flex-col gap-2">
-                <Image className="h-6 w-6" />
+                <File className="h-6 w-6" />
                 Image OCR
               </Button>
             </div>
